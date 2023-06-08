@@ -18,21 +18,11 @@ let getHumanChoice = () => {
 
 let conditions = (playerselection, computerselection) => {
     if (playerselection == computerselection)
-        return "Tie";
-    if (playerselection == "Rock" && computerselection == "Paper")
-        return "You Lost! Computer Wins";
-    if (playerselection == "Rock" && computerselection == "Scissor")
-        return "You Win! Computer Lost";
-
-    if (playerselection == "Paper" && computerselection == "Scissor")
-        return "You Lost! Computer Wins";
-    if (playerselection == "Paper" && computerselection == "Rock")
-        return "You Win! Computer Lost";
-
-    if (playerselection == "Scissor" && computerselection == "Rock")
-        return "You Lost! Computer Wins";
-    if (playerselection == "Scissor" && computerselection == "Paper")
-        return "You Win! Computer Lost";
+        return 0;
+    if (playerselection == "Rock" && computerselection == "Scissor" || playerselection == "Paper" && computerselection == "Rock" || playerselection == "Scissor" && computerselection == "Paper")
+        return 1;
+    else
+        return -1;
 }
 
 let playRound = () => {
@@ -42,10 +32,33 @@ let playRound = () => {
 }
 
 let Game=()=>{
-    rounds=5;
+    let rounds=5,playerCount=0,compCount=0;
     for (let index = 0; index < rounds; index++) {
-        console.log(playRound());
+        let result=playRound();
+
+        if(result==1)
+        {
+            console.log("You wins this round");
+        }
+        else if(result==-1)
+        {
+            console.log("Computer wins this round");
+        }
+        else
+        {
+            console.log("Tie");
+        }
+
+        playerCount=(result==1)?playerCount+1:playerCount;
+        compCount=(result==-1)?compCount+1:compCount;
     }
+
+    if(playerCount>compCount)
+        alert("Human Wins!!!");
+    else if(playerCount<compCount)
+        alert("Computer Wins!!!");
+    else
+        alert("Its a Tie!!");
 }
 
 Game();
