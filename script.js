@@ -53,7 +53,7 @@ let writeSymbol=(playerselection,computerselection)=>
     const compImg=document.querySelector('.innerlayer-1 #c-img');
 
     playImg.src="./images/"+playerselection.toLowerCase()+".png";
-    compImg.src="/images/"+computerselection.toLowerCase()+".png";
+    compImg.src="./images/"+computerselection.toLowerCase()+".png";
 }
 let writeScore=(score1,score2)=>{
     const pscore=document.querySelector("#pScore");
