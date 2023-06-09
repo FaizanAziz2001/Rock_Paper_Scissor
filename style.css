@@ -1,0 +1,111 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    
+}
+
+
+body{
+    background-color: #36393f;  
+}
+
+.layer-1 img,input {
+    height: 120px;
+    width: 150px;
+}
+.header
+{
+    background-color: #ffb703;
+    padding: 20px;
+}
+.header p{
+  
+    font-size: 80px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.layer-1{
+
+    margin-top: 10px;
+    background-color: #36393F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.layer-1 input{
+    border: 5px dotted #000000;
+    
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #333438;
+    margin: 0 20px 0 20px;
+    transition: 0.2s;
+}
+
+.layer-1 input:hover{
+    transform: scale(1.1);
+}
+.layer-1 #heading{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 50px;
+
+}
+.layer-1 #Score{
+    margin-bottom: 50px;
+    
+}
+
+.layer-1 .innerlayer-1 .scores{
+    font-size: 100px;
+    text-align: center;
+
+}
+
+.layer-1 .innerlayer-1 p{
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.layer-1 .innerlayer-1
+{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+
+#modal{
+    border-radius: 5px;
+    background-color: #333438;
+    padding: 20px 40px 20px 40px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+#modal h1{
+    
+    color: white;
+    margin-bottom: 20px;
+    
+}
+
+#modal button{
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    font-weight: bolder;
+}
+#modal::backdrop{
+    background-color: grey;
+    opacity: .3;
+}

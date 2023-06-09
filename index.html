@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    
+
+    <div class="header">
+        <p>Rock Paper Scissor</p>
+    </div>
+
+    <div class="layer-1">
+
+        <p id="heading">
+            First to score 5 Wins
+        </p>
+
+
+        <div class="innerlayer-1">
+            <img id="p-img">
+            <img id="c-img">
+        </div>
+           
+        <div class="innerlayer-1" id="Score">
+
+            <div>
+                
+                <p class="scores" id="pScore">0</p>
+                <p>Player Score</p>
+            </div>
+            
+            <div>
+                <p class="scores" id="cScore">0</p>
+                <p>Computer Score</p>
+            </div>
+            
+        </div>
+
+        <div class="innerlayer-1">
+            <input type="image" src="images/rock.png" value="Rock" >
+            <input type="image" value="Paper" src="images/paper.png">
+            <input type="image" value="Scissor" src="images/scissor.png">
+        </div>
+
+    </div>
+
+    <dialog id="modal">
+        <h1>Game Over</h1>
+        <button>Restart game</button>
+    </dialog>
 </body>
+
 </html>
